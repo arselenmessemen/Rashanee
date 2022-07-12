@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Store | Rashane</title>
+  </head>
+  <body>
+    <!--nav-->
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/logo.png" alt="logo" width="100px"
+            /></a>
+          </div>
+
+          <nav class="nav">
+            <ul>
+              <li><a class="ab" href="index.html">Home</a></li>
+              <li><a class="ab" href="store.html">Store</a></li>
+              <li><a class="ab" href="about.html">About</a></li>
+              <li><a class="ab" href="account.html">Account</a></li>
+            </ul>
+          </nav>
+          <a class="ab" href=""
+            ><img src="img/panier.png" width="30px" height="30px" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    <!--Sign up-->
+    <div class="center">
+      <h1 class="l">SignUp</h1>
+      <form method="post" class="form">
+        <div class="txt">
+          <input type="text" required class="input" />
+          <span class="span"></span>
+          <label class="lb"> Name</label>
+        </div>
+        <div class="txt">
+          <input type="text" required class="input" />
+          <span class="span"></span>
+          <label class="lb"> Surname </label>
+        </div>
+
+        <div class="txt">
+          <input type="email" required class="input" />
+          <span class="span"></span>
+          <label class="lb"> Email </label>
+        </div>
+        <div class="txt">
+          <input type="email" required class="input" />
+          <span class="span"></span>
+          <label class="lb"> Confirm Email </label>
+        </div>
+        <div class="txt">
+          <input type="password" required class="input" />
+          <span class="span"></span>
+          <label class="lb"> Password </label>
+        </div>
+        <div class="txt">
+          <input type="password" required class="input" />
+          <span class="span"></span>
+          <label class="lb"> Confirm Password </label>
+        </div>
+        <input
+          type="submit"
+          value="SignUp"
+          class="submit"
+          onclick="openpopit()"
+        />
+        <div class="popit" id="popit">
+          <h2>Thank You</h2>
+          <p class="p">Your details has been successfully submitted. Thanks!</p>
+          <button type="button" class="btn" onclick="closepopit()">OK</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let popit = document.getElementById("popit");
+
+      function openpopit() {
+        popit.classList.add("open-popit");
+      }
+
+      function closepopit() {
+        popit.classList.remove("open-popit");
+      }
+    </script>
+  </body>
+</html>
